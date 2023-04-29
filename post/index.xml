@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ma2bader@uwaterloo.ca (Mujtaba Bader)</managingEditor>
     <webMaster>ma2bader@uwaterloo.ca (Mujtaba Bader)</webMaster>
-    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What I Did in April</title>
       <link>https://moeb15.github.io/portfolio/post/2022-04-23-april-blog/</link>
-      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2022-04-23-april-blog/</guid>
       <description></description>
@@ -27,20 +27,20 @@
     </item>
     
     <item>
+      <title>Overwatch 2 Competitive Data Analysis</title>
+      <link>https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/</link>
+      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
+      <guid>https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Amazon Product Data Analysis</title>
       <link>https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/</link>
       <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Overwatch 2 Competitive Data Analysis - In Progress</title>
-      <link>https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/</link>
-      <pubDate>Sun, 17 Apr 2022 00:00:00 +0000</pubDate>
-      <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
-      <guid>https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/</guid>
       <description></description>
     </item>
     

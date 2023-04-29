@@ -10,7 +10,7 @@
  
 
 
-      <title>Overwatch 2 Competitive Data Analysis - In Progress - </title>
+      <title>Overwatch 2 Competitive Data Analysis - </title>
 
   <meta name="description" content="Analysis of Overwatch 2 Season 2 Competitive Data">
   <meta name="author" content="Mujtaba Bader"/><script type="application/ld+json">
@@ -49,7 +49,7 @@
         "position": 3,
         "item": {
           "@id": "https:\/\/moeb15.github.io\/portfolio\/post\/2022-04-09-ow2-analysis\/",
-          "name": "Overwatch 2 competitive data analysis in progress"
+          "name": "Overwatch 2 competitive data analysis"
         }
     }]
 }
@@ -60,12 +60,12 @@
   "author": {
     "name" : "Mujtaba Bader"
   },
-  "headline": "Overwatch 2 Competitive Data Analysis - In Progress",
+  "headline": "Overwatch 2 Competitive Data Analysis",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  159 ,
-  "datePublished" : "2022-04-17T00:00:00",
-  "dateModified" : "2022-04-17T00:00:00",
+  "wordCount":  225 ,
+  "datePublished" : "2022-04-20T00:00:00",
+  "dateModified" : "2022-04-20T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
   "keywords" : [ "" ],
   "mainEntityOfPage" : "https:\/\/moeb15.github.io\/portfolio\/post\/2022-04-09-ow2-analysis\/",
@@ -82,13 +82,13 @@
 }
 </script>
 
-<meta property="og:title" content="Overwatch 2 Competitive Data Analysis - In Progress" />
+<meta property="og:title" content="Overwatch 2 Competitive Data Analysis" />
 <meta property="og:description" content="Analysis of Overwatch 2 Season 2 Competitive Data">
 <meta property="og:url" content="https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mujtaba Bader" />
 
-  <meta name="twitter:title" content="Overwatch 2 Competitive Data Analysis - In Progress" />
+  <meta name="twitter:title" content="Overwatch 2 Competitive Data Analysis" />
   <meta name="twitter:description" content="Analysis of Overwatch 2 Season 2 Competitive Data">
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://moeb15.github.io/portfolio/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -213,7 +213,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Overwatch 2 Competitive Data Analysis - In Progress</h1>
+                <h1>Overwatch 2 Competitive Data Analysis</h1>
               
               
               
@@ -225,13 +225,13 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 17, 2022
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 20, 2022
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;159&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;225&nbsp;words
   
   
     
@@ -258,14 +258,21 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <h2 id="project-overview">Project Overview</h2>
-<p>This is a project I&rsquo;m currently working on, as of now it&rsquo;s not my primary focus but it&rsquo;s something I&rsquo;m doing on the side.
-Using season 2 competitive data I&rsquo;d like to try and come to some conclusion on the balance state of the game during season 2.
-As of now I&rsquo;ve completed most of the analysis, I&rsquo;ve looked at the data for Tank win-rate and pick-rate, I&rsquo;ve also done the same for supports.
-Though I feel the data I&rsquo;ve got doesn&rsquo;t tell the full story of the balance state of the game, the subjective experience of the players depending
-on their skill tier is something that should be taken into account when coming to any conclusions, as such it&rsquo;s quite difficult to generalize given
-the data.</p>
+<p>Using season 2 competitive data, I attempted to try and come to some conclusion on the balance state of the game during season 2.
+The analysis is done using the pick-rate and win-rate for each hero of each role, across all 7 skill tiers. Though it may be difficult
+to come to a solid conclusion using primarily pick-rate and win-rate, given that we are analyzing data from the competitive game-mode,
+we can make the assumption that as skill tier increases, players learn the optimal team compositions to play the game.
+As a result, we are able to come to a very likely conclusion on the balance state of the game.
+The steps I took are as follows,</p>
+<ul>
+<li>Split the data from 1 DataFrame into 3, each containing the heroes of the corresponding classes, Tank, DPS, Support</li>
+<li>Analyze trends in pick-rates across all 7 skill tiers</li>
+<li>Analyze trends in win-rates for individual heroes in each class</li>
+<li>Using the analysis and my background knowledge of the game, form a conclusion on the balance state of the game
+For more of a detailed look at my code and conclusions on the balance state refer to the <a href="https://github.com/moeb15/Overwatch-2-Season-2-Competitive-Data-Analysis">github repository</a>.</li>
+</ul>
 <h2 id="visualizations">Visualizations</h2>
-<p>Here are some of the visualizations I&rsquo;ve created so far when analyzing the data, starting with the tank pick-rates,</p>
+<p>Here are some of the visualizations I&rsquo;ve created when analyzing the data, starting with the tank pick-rates,</p>
 
 <link rel="stylesheet" href="https://moeb15.github.io/portfolio/css/hugo-easy-gallery.css" />
 <div class="box" >
@@ -304,12 +311,12 @@ the data.</p>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://moeb15.github.io/portfolio/post/2022-04-01-google-forecasting/" data-toggle="tooltip" data-placement="top" title="Alphabet Inc. Stock Forecasting">&larr; Previous Post</a>
+              <a href="https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/" data-toggle="tooltip" data-placement="top" title="Amazon Product Data Analysis">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/" data-toggle="tooltip" data-placement="top" title="Amazon Product Data Analysis">Next Post &rarr;</a>
+              <a href="https://moeb15.github.io/portfolio/post/2022-04-22-twitter-sentiment-analysis/" data-toggle="tooltip" data-placement="top" title="Twitter Sentiment Analysis">Next Post &rarr;</a>
             </li>
           
         </ul>
