@@ -276,8 +276,7 @@ a dataset from Kaggle, but instead to use the Spotify Web API to fetch the lates
 wrote the helper functions necessary to fetch the data. Here&rsquo;s some of the code I used, this particular function fetches artists of a given
 genre with a maximum of 50 per page available and appends them into a dictionary with their name as the key, and the list of genres they belong
 to as the value,</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">spotify_search</span><span class="p">(</span><span class="n">token</span><span class="p">,</span><span class="n">genre</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">spotify_search</span><span class="p">(</span><span class="n">token</span><span class="p">,</span><span class="n">genre</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">=</span> <span class="n">limit</span><span class="o">*</span><span class="n">i</span>
 </span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.spotify.com/v1/search&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">headers</span> <span class="o">=</span> <span class="n">get_auth_header</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
@@ -285,7 +284,6 @@ to as the value,</p>
 </span></span><span class="line"><span class="cl">    <span class="n">query_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">query_str</span>
 </span></span><span class="line"><span class="cl">    <span class="n">artist_search</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">query_url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="n">name_genres</span> <span class="o">=</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">artist_search</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;artists&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">])):</span>
