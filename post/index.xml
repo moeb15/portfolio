@@ -7,11 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ma2bader@uwaterloo.ca (Mujtaba Bader)</managingEditor>
     <webMaster>ma2bader@uwaterloo.ca (Mujtaba Bader)</webMaster>
-    <lastBuildDate>Fri, 29 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spotify Recommender System - Part 1</title>
+      <link>https://moeb15.github.io/portfolio/post/2023-05-01-spotify-recommender-part1/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
+      <guid>https://moeb15.github.io/portfolio/post/2023-05-01-spotify-recommender-part1/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>What I Did in April</title>
       <link>https://moeb15.github.io/portfolio/post/2022-04-23-april-blog/</link>
-      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2022-04-23-april-blog/</guid>
       <description></description>
@@ -20,7 +29,7 @@
     <item>
       <title>Twitter Sentiment Analysis</title>
       <link>https://moeb15.github.io/portfolio/post/2022-04-22-twitter-sentiment-analysis/</link>
-      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2022-04-22-twitter-sentiment-analysis/</guid>
       <description></description>
@@ -29,7 +38,7 @@
     <item>
       <title>Overwatch 2 Competitive Data Analysis - In Progress</title>
       <link>https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/</link>
-      <pubDate>Wed, 20 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/</guid>
       <description></description>
@@ -38,7 +47,7 @@
     <item>
       <title>Amazon Product Data Analysis</title>
       <link>https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/</link>
-      <pubDate>Mon, 18 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/</guid>
       <description></description>
@@ -47,7 +56,7 @@
     <item>
       <title>Alphabet Inc. Stock Forecasting</title>
       <link>https://moeb15.github.io/portfolio/post/2022-04-01-google-forecasting/</link>
-      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2022-04-01-google-forecasting/</guid>
       <description></description>

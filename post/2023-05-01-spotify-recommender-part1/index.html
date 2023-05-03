@@ -10,9 +10,9 @@
  
 
 
-      <title>Alphabet Inc. Stock Forecasting - </title>
+      <title>Spotify Recommender System - Part 1 - </title>
 
-  <meta name="description" content="Time-Series Forecasting Of The Alphabet Inc. Stock">
+  <meta name="description" content="Creating a Recommender System Using Spotify Data">
   <meta name="author" content="Mujtaba Bader"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -48,8 +48,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/moeb15.github.io\/portfolio\/post\/2022-04-01-google-forecasting\/",
-          "name": "Alphabet inc. stock forecasting"
+          "@id": "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-01-spotify-recommender-part1\/",
+          "name": "Spotify recommender system part 1"
         }
     }]
 }
@@ -60,15 +60,15 @@
   "author": {
     "name" : "Mujtaba Bader"
   },
-  "headline": "Alphabet Inc. Stock Forecasting",
+  "headline": "Spotify Recommender System - Part 1",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  134 ,
-  "datePublished" : "2023-04-01T00:00:00",
-  "dateModified" : "2023-04-01T00:00:00",
+  "wordCount":  352 ,
+  "datePublished" : "2023-05-01T00:00:00",
+  "dateModified" : "2023-05-01T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/moeb15.github.io\/portfolio\/post\/2022-04-01-google-forecasting\/",
+  "mainEntityOfPage" : "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-01-spotify-recommender-part1\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/moeb15.github.io\/portfolio",
@@ -82,14 +82,14 @@
 }
 </script>
 
-<meta property="og:title" content="Alphabet Inc. Stock Forecasting" />
-<meta property="og:description" content="Time-Series Forecasting Of The Alphabet Inc. Stock">
-<meta property="og:url" content="https://moeb15.github.io/portfolio/post/2022-04-01-google-forecasting/" />
+<meta property="og:title" content="Spotify Recommender System - Part 1" />
+<meta property="og:description" content="Creating a Recommender System Using Spotify Data">
+<meta property="og:url" content="https://moeb15.github.io/portfolio/post/2023-05-01-spotify-recommender-part1/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mujtaba Bader" />
 
-  <meta name="twitter:title" content="Alphabet Inc. Stock Forecasting" />
-  <meta name="twitter:description" content="Time-Series Forecasting Of The Alphabet Inc. Stock">
+  <meta name="twitter:title" content="Spotify Recommender System - Part 1" />
+  <meta name="twitter:description" content="Creating a Recommender System Using Spotify Data">
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://moeb15.github.io/portfolio/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.102.0" />
@@ -213,25 +213,25 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Alphabet Inc. Stock Forecasting</h1>
+                <h1>Spotify Recommender System - Part 1</h1>
               
               
               
                 
-                  <h2 class="post-subheading">Time-Series Forecasting Of The Alphabet Inc. Stock</h2>
+                  <h2 class="post-subheading">Creating a Recommender System Using Spotify Data</h2>
                 
               
               
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 1, 2023
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 1, 2023
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;134&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;352&nbsp;words
   
   
     
@@ -258,42 +258,46 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <h2 id="project-overview">Project Overview</h2>
-<p>For this project I used historical opening, closing, and max stock values over a given day to forecast the closing value of the Alphabet Inc. stock.</p>
-<h2 id="steps-followed">Steps Followed</h2>
-<p>The following are the steps I took throughout the project,</p>
+<p>For this project I&rsquo;m trying to build a recommender system that will recommend users a selection of artist given certain genres that the user selects.
+I&rsquo;d like to make it a web application that users can interact with and not just some code that lies in a github repository. For this post I&rsquo;ll be going
+over the process I followed for data sourcing and data collection.</p>
+<h2 id="data-sourcing">Data Sourcing</h2>
+<p>Given the objective of this project I asked myself the following questions,</p>
 <ul>
-<li>Pull YaHoo Finance data on Alphabet Inc Stock using Yfinance API</li>
-<li>Clean data and scale values</li>
-<li>Build model using 1d convolutional layers</li>
+<li>What exact data do I need?</li>
+<li>Should I use an existing dataset from somewhere like Kaggle?</li>
+<li>Should I use another method of obtaining the data like through an API?</li>
 </ul>
-<p>For more details please take a look at the <a href="https://github.com/moeb15/Alphabet-Inc.-Stock-Forecasting">github repository</a>.</p>
-<h2 id="model-performance">Model Performance</h2>
-<p>The following graphs display the training and validation loss over training epochs,</p>
-
-<link rel="stylesheet" href="https://moeb15.github.io/portfolio/css/hugo-easy-gallery.css" />
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="https://moeb15.github.io/portfolio/images/goog_t_v_val_loss.png" alt="/images/goog_t_v_val_loss.png"/>
-    </div>
-    <a href="https://moeb15.github.io/portfolio/images/goog_t_v_val_loss.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-<p>We see that the model perfomed quite well with only a little overfitting of the training.
-Let&rsquo;s visualize how the model predicts the values of the last 100 of stock data.</p>
-
-
-<div class="box" >
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="https://moeb15.github.io/portfolio/images/goog_100.png" alt="/images/goog_100.png"/>
-    </div>
-    <a href="https://moeb15.github.io/portfolio/images/goog_100.png" itemprop="contentUrl"></a>
-  </figure>
-</div>
-
-<p>We see it does quite well, and with only a mean squared error of about 0.0002.</p>
+<p>For the 3 questions I came to the following answers, the data I needs to contain information about an artist and the music they produce,
+mainly just their stage name and the genres of music they belong to, and since I wanted the most recent data I decided its best not to use<br>
+a dataset from Kaggle, but instead to use the Spotify Web API to fetch the latest information on the top artists of each genre.</p>
+<h2 id="data-collection">Data Collection</h2>
+<p>With the help  of a tutorial from <a href="https://www.youtube.com/watch?v=WAmEZBEeNmg&amp;ab_channel=Linode">Tech With Tim</a>, and the Spotify Web API documentation, I
+wrote the helper functions necessary to fetch the data. Here&rsquo;s some of the code I used, this particular function fetches artists of a given
+genre with a maximum of 50 per page available and appends them into a dictionary with their name as the key, and the list of genres they belong
+to as the value,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">spotify_search</span><span class="p">(</span><span class="n">token</span><span class="p">,</span><span class="n">genre</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">=</span> <span class="n">limit</span><span class="o">*</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.spotify.com/v1/search&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span> <span class="o">=</span> <span class="n">get_auth_header</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">query_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;?q=genre:</span><span class="si">{</span><span class="n">genre</span><span class="si">}</span><span class="s1">&amp;type=artist&amp;market=CA&amp;limit=</span><span class="si">{</span><span class="n">limit</span><span class="si">}</span><span class="s1">&amp;offset=</span><span class="si">{</span><span class="n">offset</span><span class="si">}</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">query_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">query_str</span>
+</span></span><span class="line"><span class="cl">    <span class="n">artist_search</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">query_url</span><span class="p">,</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">name_genres</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">artist_search</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;artists&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">])):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">name</span> <span class="o">=</span> <span class="n">artist_search</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;artists&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">genres</span> <span class="o">=</span> <span class="n">artist_search</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;artists&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="s1">&#39;genres&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">name_genres</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">genres</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">name_genres</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">name_genres</span>
+</span></span></code></pre></div><p>I used another helper function to obtain the list of genres and let the code run for sometime with ratelimiting applied
+to avoid sending too many request in a short period of time. In the next post I&rsquo;ll go over the EDA process.</p>
 
         
 
@@ -309,10 +313,10 @@ Let&rsquo;s visualize how the model predicts the values of the last 100 of stock
       
         <ul class="pager blog-pager">
           
-          
-            <li class="next">
-              <a href="https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/" data-toggle="tooltip" data-placement="top" title="Amazon Product Data Analysis">Next Post &rarr;</a>
+            <li class="previous">
+              <a href="https://moeb15.github.io/portfolio/post/2022-04-23-april-blog/" data-toggle="tooltip" data-placement="top" title="What I Did in April">&larr; Previous Post</a>
             </li>
+          
           
         </ul>
       
