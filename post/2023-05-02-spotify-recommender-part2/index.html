@@ -63,7 +63,7 @@
   "headline": "Spotify Recommender System - Part 2",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  672 ,
+  "wordCount":  740 ,
   "datePublished" : "2023-05-02T00:00:00",
   "dateModified" : "2023-05-02T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
@@ -231,7 +231,7 @@
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;672&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;740&nbsp;words
   
   
     
@@ -342,10 +342,11 @@ then plot boxenplots coresponding to the 2, heres the code I used for this and t
   </figure>
 </div>
 
-<p>Given the objective of the project and the nature of the data, it did not make sense to remove the outliers present, the outliers
+<p>Given the objective of the project and the nature of the data, it did not make sense to remove all the outliers present, the outliers
 in the subgenre column simply displayed what were the most popular genres and removing that would have a negative effect on the
 recommender system I&rsquo;m trying to create, and the outliers in the artist column made no sense to remove for a similar reason, as a
-result I had kept all the data.</p>
+result I had kept all the data. Although it may be necessary to remove the subgenre of &ldquo;sleep&rdquo; as, I assume, its not likely that a user is going
+to be looking for anything in this genre and it is a signficant outlier in our dataset so it may cause issues when we train our model.</p>
 <h2 id="model-selection">Model Selection</h2>
 <p>After going through the analysis, I laid out possible models that would be appropriate for the task. Given that we&rsquo;re dealing with
 unlabeled data, the problem requires an unsupervised learning algorithm, in particular the problem falls within the domain of clustering,
@@ -356,8 +357,9 @@ a user selects. As such I took a look at the following clustering algorithms</p>
 <li>Gaussian Mixtures</li>
 <li>DBSCAN</li>
 </ul>
-<p>After some research, I came to the conclusion that DBSCAN would be best for the problem seeing as K-Means is sensitve to outliers.
-Keep in mind this is not a comprehensive list, since this process is iterative it&rsquo;s likely I&rsquo;ll comeback and find a better model for
+<p>Currently I&rsquo;m still in the process of deciding which model is well suited for our problem, there exists a model known as K-Modes that
+operates on categorical data which may be better suited for our problem  than the other listed models.</p>
+<p>Keep in mind this is not a comprehensive list, since this process is iterative it&rsquo;s likely I&rsquo;ll comeback and find a better model for
 the problem. In the next post I&rsquo;ll go over preprocessing the data and training the model.</p>
 
         
