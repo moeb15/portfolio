@@ -63,7 +63,7 @@
   "headline": "Spotify Recommender System - Part 2",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  910 ,
+  "wordCount":  817 ,
   "datePublished" : "2023-05-02T00:00:00",
   "dateModified" : "2023-05-02T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
@@ -228,10 +228,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on May 2, 2023
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;910&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;817&nbsp;words
   
   
     
@@ -352,7 +352,7 @@ to be looking for anything in this genre and it is a signficant outlier in our d
 user, genres of interest, is known as content-based filtering, another possible approach we could take is collaborative filtering.
 In collaborative filtering we&rsquo;d use the preferences of similar users to make recommendations for a user, so we can think about
 content-based filtering as an unsupervised clustering problem, and collaborative filtering as a supervised classification problem.</p>
-<p>After going through the analysis, we see that content-based filtering is a reasobale approach for our problem, as a result we require an
+<p>After going through the analysis and considering the data we have, we see that content-based filtering is the approach for our problem, as a result we require an
 unsupervised learning algorithm, in particular we need to make use of unsupervised clustering algorithms, seeing as
 we&rsquo;re trying to group together similar artists based of the genres of music they belong to, and select relevant artists based of the genres
 a user selects. As such, I took a look at the following clustering algorithms</p>
@@ -362,17 +362,8 @@ a user selects. As such, I took a look at the following clustering algorithms</p
 <li>DBSCAN</li>
 </ul>
 <p>Currently I&rsquo;m still in the process of deciding which model is well suited for our problem, there exists a model known as K-Modes that
-operates on categorical data which may be better suited for our problem  than the other listed models.</p>
-<p>If we were to take the collaborative filtering approach, we could treat the artists as class labels with our input data being the genres,
-in this case the user would still have to select genres of interest, however instead of clustering artists based off genre then selecting
-the ones closest to the genres a user selects, we&rsquo;d take in the selected genres and calculate the probability that the user is selecting<br>
-a certain artist from a list of artist, then selecting the top n artist based off the probabilities, possible algorthms we could use are</p>
-<ul>
-<li>Decision Trees</li>
-<li>Random Forests</li>
-<li>XGBoost</li>
-</ul>
-<p>Keep in mind that neither lists are comprehensive, since this process is iterative it&rsquo;s likely I&rsquo;ll comeback and find a better model for
+operates on categorical data which may be better suited for our problem than the other listed models.</p>
+<p>Keep in mind that this is not a comprehensive list, since this process is iterative it&rsquo;s likely I&rsquo;ll comeback and find a better model for
 the problem. In the next post I&rsquo;ll go over preprocessing the data and training the model.</p>
 
         
