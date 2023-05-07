@@ -10,8 +10,9 @@
  
 
 
-      <title>Posts - </title>
+      <title>Spotify Recommender System - Final Part - </title>
 
+  <meta name="description" content="Creating a Recommender System Using Spotify Data">
   <meta name="author" content="Mujtaba Bader"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -32,13 +33,63 @@
   
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/moeb15.github.io\/portfolio",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-07-spotify-recommender-part4\/",
+          "name": "Spotify recommender system final part"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Mujtaba Bader"
+  },
+  "headline": "Spotify Recommender System - Final Part",
+  "description" : "",
+  "inLanguage" : "en",
+  "wordCount":  216 ,
+  "datePublished" : "2023-05-07T00:00:00",
+  "dateModified" : "2023-05-07T00:00:00",
+  "image" : "https:\/\/moeb15.github.io\/portfolio",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-07-spotify-recommender-part4\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/moeb15.github.io\/portfolio",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/moeb15.github.io\/portfolio",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
 
-<meta property="og:title" content="Posts" />
-<meta property="og:url" content="https://moeb15.github.io/portfolio/post/" />
+<meta property="og:title" content="Spotify Recommender System - Final Part" />
+<meta property="og:description" content="Creating a Recommender System Using Spotify Data">
+<meta property="og:url" content="https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mujtaba Bader" />
 
-  <meta name="twitter:title" content="Posts" />
+  <meta name="twitter:title" content="Spotify Recommender System - Final Part" />
+  <meta name="twitter:description" content="Creating a Recommender System Using Spotify Data">
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://moeb15.github.io/portfolio/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta name="generator" content="Hugo 0.102.0" />
@@ -162,9 +213,13 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Posts</h1>
+                <h1>Spotify Recommender System - Final Part</h1>
               
               
+              
+                
+                  <h2 class="post-subheading">Creating a Recommender System Using Spotify Data</h2>
+                
               
               
                 <span class="post-meta">
@@ -173,10 +228,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on May 7, 2023
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;0&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;216&nbsp;words
   
   
     
@@ -198,422 +253,64 @@
 
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="posts-list">
-          
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4/">
-        <h2 class="post-title">Spotify Recommender System - Final Part</h2>
-        
-        <h3 class="post-subtitle">
-            Creating a Recommender System Using Spotify Data
-        </h3>
-        
-        
-        
-    </a>
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="project-overview">Project Overview</h2>
+<p>For this project I&rsquo;m trying to build a recommender system that will recommend users a selection of artist given certain genres that the user selects.
+I&rsquo;d like to make it a web application that users can interact with and not just some code that lies in a github repository. In the previous post I went
+over preprocessing data and training my model, in this post I&rsquo;ll discuss the end product, which is a web application.</p>
+<h2 id="web-application">Web Application</h2>
+<p>Before diving into creating the web application, I had to decide on what framework I was going to use. I do have some experience with the Flask framework,
+however I managed to find something that simplified the process alot more, the open-source Python library Streamlit. Streamlit is designed for building data
+driven web applications, it&rsquo;s incredibly simple and allows you to develop and deploy your applications in minutes. For my particular project all I needed was
+a way for users to select genres of interest, select the number of artists they wanted to be recommended, and display the recommended artists. All that was needed
+was a few lines of code and the application was up and running,</p>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 7, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;216&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4/" class="post-read-more">[Read More]</a>
-        
+<link rel="stylesheet" href="https://moeb15.github.io/portfolio/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://moeb15.github.io/portfolio/images/spotify_recommendations.png" alt="/images/spotify_recommendations.png"/>
     </div>
+    <a href="https://moeb15.github.io/portfolio/images/spotify_recommendations.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
 
-    
+<p>With the web app done all I need to do now is deploy it for users to interact with it.</p>
 
-</article>
+        
+
+        
+
+        
           
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2023-05-06-spotify-recommender-part3/">
-        <h2 class="post-title">Spotify Recommender System - Part 3</h2>
-        
-        <h3 class="post-subtitle">
-            Creating a Recommender System Using Spotify Data
-        </h3>
-        
-        
-        
-    </a>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 6, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;449&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2023-05-06-spotify-recommender-part3/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
           
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2023-05-02-spotify-recommender-part2/">
-        <h2 class="post-title">Spotify Recommender System - Part 2</h2>
         
-        <h3 class="post-subtitle">
-            Creating a Recommender System Using Spotify Data
-        </h3>
-        
-        
-        
-    </a>
+      </article>
 
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 2, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;895&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2023-05-02-spotify-recommender-part2/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
+      
+        <ul class="pager blog-pager">
           
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2023-05-01-spotify-recommender-part1/">
-        <h2 class="post-title">Spotify Recommender System - Part 1</h2>
-        
-        <h3 class="post-subtitle">
-            Creating a Recommender System Using Spotify Data
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 1, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;361&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2023-05-01-spotify-recommender-part1/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
+            <li class="previous">
+              <a href="https://moeb15.github.io/portfolio/post/2023-05-06-spotify-recommender-part3/" data-toggle="tooltip" data-placement="top" title="Spotify Recommender System - Part 3">&larr; Previous Post</a>
+            </li>
           
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2022-04-23-april-blog/">
-        <h2 class="post-title">What I Did in April</h2>
-        
-        <h3 class="post-subtitle">
-            An Overview of the Work I&#39;ve Done So Far
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 29, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;605&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2022-04-23-april-blog/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
           
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2022-04-22-twitter-sentiment-analysis/">
-        <h2 class="post-title">Twitter Sentiment Analysis</h2>
-        
-        <h3 class="post-subtitle">
-            Sentiment Analysis of Tweets Dataset Obtained From Kaggle
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 22, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;182&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
+        </ul>
+      
 
 
-    </p>
-    <div class="post-entry">
+      
         
         
-        <a href="https://moeb15.github.io/portfolio/post/2022-04-22-twitter-sentiment-analysis/" class="post-read-more">[Read More]</a>
-        
-    </div>
+      
 
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/">
-        <h2 class="post-title">Overwatch 2 Competitive Data Analysis</h2>
-        
-        <h3 class="post-subtitle">
-            Analysis of Overwatch 2 Season 2 Competitive Data
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 20, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;227&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2022-04-09-ow2-analysis/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/">
-        <h2 class="post-title">Amazon Product Data Analysis</h2>
-        
-        <h3 class="post-subtitle">
-            Analyzing Data Of 2023 Amazon Products
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 18, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;227&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2022-04-18-amazon-data-analysis/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://moeb15.github.io/portfolio/post/2022-04-01-google-forecasting/">
-        <h2 class="post-title">Alphabet Inc. Stock Forecasting</h2>
-        
-        <h3 class="post-subtitle">
-            Time-Series Forecasting Of The Alphabet Inc. Stock
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on April 1, 2023
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;134&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mujtaba Bader
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        
-        <a href="https://moeb15.github.io/portfolio/post/2022-04-01-google-forecasting/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-        </div>
-        
-      </div>
     </div>
   </div>
+</div>
 
       
 <footer>

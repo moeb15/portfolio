@@ -7,11 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ma2bader@uwaterloo.ca (Mujtaba Bader)</managingEditor>
     <webMaster>ma2bader@uwaterloo.ca (Mujtaba Bader)</webMaster>
-    <lastBuildDate>Wed, 03 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spotify Recommender System - Final Part</title>
+      <link>https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4/</link>
+      <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
+      <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
+      <guid>https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Spotify Recommender System - Part 3</title>
       <link>https://moeb15.github.io/portfolio/post/2023-05-06-spotify-recommender-part3/</link>
-      <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
       <guid>https://moeb15.github.io/portfolio/post/2023-05-06-spotify-recommender-part3/</guid>
       <description></description>
