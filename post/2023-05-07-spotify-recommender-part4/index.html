@@ -63,7 +63,7 @@
   "headline": "Spotify Recommender System - Part 4",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  239 ,
+  "wordCount":  477 ,
   "datePublished" : "2023-05-07T00:00:00",
   "dateModified" : "2023-05-07T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
@@ -228,10 +228,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on May 7, 2023
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;239&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;477&nbsp;words
   
   
     
@@ -280,6 +280,17 @@ was a few lines of code and the application was up and running,</p>
 
 <p>With the web app done all I need to do now is deploy it for users to interact with it.
 If you&rsquo;d like to take a look at the code I wrote for this project, you can find it at the <a href="https://github.com/moeb15/spotify_recommender">github repository</a>.</p>
+<h2 id="project-retrospective">Project Retrospective</h2>
+<p>Though I have learned plently from this projecty, overall the end results of the project are probably not too accurate,
+and I suspect the issues arise as a result of the amount of clusters within our K-Modes model.
+The data contains over 4000 unique genres and 35000 artists, but we only have 75 clusters in our model. During the training process,
+we were lead to believe that around 75 clusters would be optimal for our model given the data, and that is in line with how we&rsquo;d interpret
+the elbow graph, however if we think beyond these heuristics and just consider exactly what we are trying to do with our data, it does not
+make sense to bundle this many artists who make distinctly different music into just 75 clusters. In addition to this, we are not adding new<br>
+data to our model, so it does not necessairly matter if it fails to generalize to new data, seeing as we only want it to make good recommendations
+given the inputted genres on our existing data. So one thing I&rsquo;d change to make this project better is to increase the number of clusters until
+the recommendations feel they make sense, at the very least no one who likes chicago drill music looking for recommendations should be suggested
+a k-pop artist. I&rsquo;ll play around with the number of clusters and give an update soon on how it performs.</p>
 
         
 
