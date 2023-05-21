@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ma2bader@uwaterloo.ca (Mujtaba Bader)</managingEditor>
     <webMaster>ma2bader@uwaterloo.ca (Mujtaba Bader)</webMaster>
-    <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Outfit Segmentation With UNet</title>
+      <link>https://moeb15.github.io/portfolio/post/2023-05-21-semantic-segmentation-unet/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
+      <guid>https://moeb15.github.io/portfolio/post/2023-05-21-semantic-segmentation-unet/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Spotify Recommender System - Part 4</title>
-      <link>https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4/</link>
+      <link>https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4-copy/</link>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
       <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
-      <guid>https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4/</guid>
+      <guid>https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4-copy/</guid>
       <description></description>
     </item>
     

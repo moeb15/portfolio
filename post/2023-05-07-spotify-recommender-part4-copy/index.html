@@ -10,7 +10,7 @@
  
 
 
-      <title>Spotify Recommender System - Part 3 - </title>
+      <title>Spotify Recommender System - Part 4 - </title>
 
   <meta name="description" content="Creating a Recommender System Using Spotify Data">
   <meta name="author" content="Mujtaba Bader"/><script type="application/ld+json">
@@ -48,8 +48,8 @@
         "@type": "ListItem",
         "position": 3,
         "item": {
-          "@id": "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-06-spotify-recommender-part3\/",
-          "name": "Spotify recommender system part 3"
+          "@id": "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-07-spotify-recommender-part4-copy\/",
+          "name": "Spotify recommender system part 4"
         }
     }]
 }
@@ -60,15 +60,15 @@
   "author": {
     "name" : "Mujtaba Bader"
   },
-  "headline": "Spotify Recommender System - Part 3",
+  "headline": "Spotify Recommender System - Part 4",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  449 ,
-  "datePublished" : "2023-05-06T00:00:00",
-  "dateModified" : "2023-05-06T00:00:00",
+  "wordCount":  542 ,
+  "datePublished" : "2023-05-07T00:00:00",
+  "dateModified" : "2023-05-07T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
   "keywords" : [ "" ],
-  "mainEntityOfPage" : "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-06-spotify-recommender-part3\/",
+  "mainEntityOfPage" : "https:\/\/moeb15.github.io\/portfolio\/post\/2023-05-07-spotify-recommender-part4-copy\/",
   "publisher" : {
     "@type": "Organization",
     "name" : "https:\/\/moeb15.github.io\/portfolio",
@@ -82,13 +82,13 @@
 }
 </script>
 
-<meta property="og:title" content="Spotify Recommender System - Part 3" />
+<meta property="og:title" content="Spotify Recommender System - Part 4" />
 <meta property="og:description" content="Creating a Recommender System Using Spotify Data">
-<meta property="og:url" content="https://moeb15.github.io/portfolio/post/2023-05-06-spotify-recommender-part3/" />
+<meta property="og:url" content="https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4-copy/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mujtaba Bader" />
 
-  <meta name="twitter:title" content="Spotify Recommender System - Part 3" />
+  <meta name="twitter:title" content="Spotify Recommender System - Part 4" />
   <meta name="twitter:description" content="Creating a Recommender System Using Spotify Data">
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://moeb15.github.io/portfolio/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -213,7 +213,7 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
               
-                <h1>Spotify Recommender System - Part 3</h1>
+                <h1>Spotify Recommender System - Part 4</h1>
               
               
               
@@ -225,13 +225,13 @@
                 <span class="post-meta">
   
   
-  <i class="fas fa-calendar"></i>&nbsp;Posted on May 6, 2023
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 7, 2023
   
   
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;449&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;542&nbsp;words
   
   
     
@@ -260,51 +260,41 @@
         <h2 id="project-overview">Project Overview</h2>
 <p>For this project I&rsquo;m trying to build a recommender system that will recommend users a selection of artist given certain genres that the user selects.
 I&rsquo;d like to make it a web application that users can interact with and not just some code that lies in a github repository. In the previous post I went
-over the EDA process and model selection, in this post I&rsquo;ll finish up my discussion on model selection, and talk about preprocessing the data and training
-the selected model.</p>
-<h2 id="model-selection">Model Selection</h2>
-<p>In the previous post I went over a few possible models that could be used for the recommender system, after some more research and experimentation I came
-to the conclusion that it was best to go with K-Modes as the model. Given that we&rsquo;re dealing with categorical data, it made sense to select K-Modes over
-K-Means or DBSCAN. For anyone reading this who may be unfamiliar with K-Modes, here&rsquo;s how it works step by step,</p>
-<ul>
-<li>Pick k observations at random, these will act as the centers of your clusters</li>
-<li>Calculate the total mismatches and assign each observation to its closest cluster</li>
-<li>Define new modes for the clusters</li>
-<li>Repeat the first 2 steps</li>
-</ul>
-<p>If you&rsquo;d like to read more on K-Modes, this <a href="https://www.analyticsvidhya.com/blog/2021/06/kmodes-clustering-algorithm-for-categorical-data/">post</a> by Harika Bonthu on
-Analytics Vidhya should provide you with more insights.</p>
-<h2 id="data-preprocessing">Data Preprocessing</h2>
-<p>The orignal format of the data was the transactional format, which as we had it was Aritst: text, Genres: text[], the assumption I made was that it would be better to
-have the data in a tabular format by unnesting the text arrays in the Genres column, this turned out to cause some problems during training, which provided me with
-some undesireable results. So after experimenting, as part of the preprocessing step I put the data back into transactional format. In addition to changing the format of the
-data, it was necessary to encode the data before passing fitting the model, to accomplish this task I opted for using Binary Encoding over One-Hot Encoding, seeing as
-the data contained many unique values and given that One-Hot Encoding is not memory efficient, our data would be too large to store in memory. After encoding the data,
-I moved onto training the model.</p>
-<h2 id="model-training">Model Training</h2>
-<p>To find the optimal amount of clusters for the model, I used the elbow method,</p>
+over preprocessing data and training my model, in this post I&rsquo;ll discuss the end product, which is a web application.</p>
+<h2 id="web-application">Web Application</h2>
+<p>Before diving into creating the web application, I had to decide on what framework I was going to use. I do have some experience with the Flask framework,
+however I managed to find something that simplified the process alot more, the open-source Python library Streamlit. Streamlit is designed for building data
+driven web applications, it&rsquo;s incredibly simple and allows you to develop and deploy your applications in minutes. For my particular project all I needed was
+a way for users to select genres of interest, select the number of artists they wanted to be recommended, and display the recommended artists. All that was needed
+was a few lines of code and the application was up and running,</p>
 
 <link rel="stylesheet" href="https://moeb15.github.io/portfolio/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
-      <img itemprop="thumbnail" src="https://moeb15.github.io/portfolio/images/elbow_method.png" alt="/images/elbow_method.png"/>
+      <img itemprop="thumbnail" src="https://moeb15.github.io/portfolio/images/spt_rec.png" alt="/images/spt_rec.png"/>
     </div>
-    <a href="https://moeb15.github.io/portfolio/images/elbow_method.png" itemprop="contentUrl"></a>
+    <a href="https://moeb15.github.io/portfolio/images/spt_rec.png" itemprop="contentUrl"></a>
   </figure>
 </div>
 
-<p>To see what recommendations the model would give based off genres of interest, I created the following helper function,</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">recommend_artists</span><span class="p">(</span><span class="n">genre_lst</span><span class="p">,</span><span class="n">model</span><span class="p">,</span><span class="n">encoder</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">rec_count</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">genre_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Subgenre&#39;</span><span class="p">:[</span><span class="n">genre_lst</span><span class="p">]})</span>
-</span></span><span class="line"><span class="cl">    <span class="n">genre_df</span><span class="p">[</span><span class="s1">&#39;Subgenre&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">genre_df</span><span class="p">[</span><span class="s1">&#39;Subgenre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">genre_enc</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">genre_df</span><span class="p">[</span><span class="s1">&#39;Subgenre&#39;</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">user_cluster</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">genre_enc</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">user_recommendations</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">labels_</span> <span class="o">==</span> <span class="n">user_cluster</span><span class="p">][</span><span class="s1">&#39;Artist&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">user_recommendations</span><span class="p">),</span><span class="n">rec_count</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">user_recommendations</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-</span></span></code></pre></div><p>In the next post I&rsquo;ll go over the process of creating the web application.</p>
+<p>With the web app done all I need to do now is deploy it for users to interact with it.
+If you&rsquo;d like to take a look at the code I wrote for this project, you can find it at the <a href="https://github.com/moeb15/spotify_recommender">github repository</a>.</p>
+<h2 id="project-retrospective">Project Retrospective</h2>
+<p>Though I have learned plently from this projecty, overall the end results of the project are probably not too accurate,
+and I suspect the issues arise as a result of the amount of clusters within our K-Modes model.
+The data contains over 4000 unique genres and 35000 artists, but we only have 75 clusters in our model. During the training process,
+we were lead to believe that around 75 clusters would be optimal for our model given the data, and that is in line with how we&rsquo;d interpret
+the elbow graph, however if we think beyond these heuristics and just consider exactly what we are trying to do with our data, it does not
+make sense to bundle this many artists who make distinctly different music into just 75 clusters.</p>
+<p>In addition to this, we are not adding new data to our model, so it does not necessairly matter if it fails to generalize to new data,
+seeing as we only want it to make good recommendations given the inputted genres on our existing data. So one thing I&rsquo;d change to make
+this project better is to increase the number of clusters until the recommendations feel they make sense, at the very least no one who
+likes chicago drill music looking for recommendations should be suggested a k-pop artist.</p>
+<p>I&rsquo;ll be giving an update under this post when I tune the model to give better results, since the elbow method was clearly not the best I&rsquo;ll opt
+something like using the silhoutte scores to determine the optimal amount of clusters, aside from that I&rsquo;ll continue researching other methods and
+tune it until I feel the recommendations are reasonable.</p>
+<p>However, regardless of the accuracy I feel this project has taught me many things and has allowed me to display my technical skills.</p>
 
         
 
@@ -321,12 +311,12 @@ I moved onto training the model.</p>
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://moeb15.github.io/portfolio/post/2023-05-02-spotify-recommender-part2/" data-toggle="tooltip" data-placement="top" title="Spotify Recommender System - Part 2">&larr; Previous Post</a>
+              <a href="https://moeb15.github.io/portfolio/post/2023-05-06-spotify-recommender-part3/" data-toggle="tooltip" data-placement="top" title="Spotify Recommender System - Part 3">&larr; Previous Post</a>
             </li>
           
           
             <li class="next">
-              <a href="https://moeb15.github.io/portfolio/post/2023-05-07-spotify-recommender-part4-copy/" data-toggle="tooltip" data-placement="top" title="Spotify Recommender System - Part 4">Next Post &rarr;</a>
+              <a href="https://moeb15.github.io/portfolio/post/2023-05-21-semantic-segmentation-unet/" data-toggle="tooltip" data-placement="top" title="Outfit Segmentation With UNet">Next Post &rarr;</a>
             </li>
           
         </ul>
