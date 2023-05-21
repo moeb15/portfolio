@@ -63,7 +63,7 @@
   "headline": "Outfit Segmentation With UNet",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  799 ,
+  "wordCount":  800 ,
   "datePublished" : "2023-05-21T00:00:00",
   "dateModified" : "2023-05-21T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
@@ -231,7 +231,7 @@
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;799&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;800&nbsp;words
   
   
     
@@ -320,7 +320,7 @@ the encoder, and another for the upsampling blocks in the decoder,</p>
 </span></span><span class="line"><span class="cl">                               <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                               <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span>
-</span></span></code></pre></div><p>After writing the helpers I defined the model the full model,</p>
+</span></span></code></pre></div><p>After writing the helpers I defined the function for the full model,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">UNet</span><span class="p">(</span><span class="n">img_shape</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">filters</span> <span class="o">=</span> <span class="mi">32</span>
