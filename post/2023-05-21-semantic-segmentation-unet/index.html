@@ -63,7 +63,7 @@
   "headline": "Outfit Segmentation With UNet",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  813 ,
+  "wordCount":  818 ,
   "datePublished" : "2023-05-21T00:00:00",
   "dateModified" : "2023-05-21T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
@@ -231,7 +231,7 @@
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;813&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;818&nbsp;words
   
   
     
@@ -285,10 +285,11 @@ a corresponding mask of the outfit.</p>
 </span></span><span class="line"><span class="cl"><span class="n">train_dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">DATASET_SIZE</span><span class="o">*</span><span class="mf">0.8</span><span class="p">))</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">BUFFER_SIZE</span><span class="p">)</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">BATCH_SIZE</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">val_dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">DATASET_SIZE</span><span class="o">*</span><span class="mf">0.8</span><span class="p">))</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">BUFFER_SIZE</span><span class="p">)</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">BATCH_SIZE</span><span class="p">)</span>
 </span></span></code></pre></div><h2 id="creating-the-model">Creating the model</h2>
-<p>The UNet model consists of an encoder and a decoder, you can think of the encoder as essentially an image classifier like VGG16 or LeNet except it does
-not contain the fully connected layer, it only consists of convolutional layers. As a result, the output of the encoder is a compressed encoded representation of our image,
-kind of like a word embedding, our decoder model does the opposite operation of the encoder model, the decoder reconstructs our
-image using the encoded representation of the image. To help with building the encoder and decoder I defined two helper functions, one for the downsampling blocks in
+<p>The UNet model consists of an encoder and a decoder, the encoder is a series of convolutional layers that compress our image, something like
+VGG16 or LeNet except without the fully connected layer which is needed for image classification, it only consists of convolutional layers.
+As a result, the output of the encoder is a compressed encoded representation of our image, kind of like a word embedding,
+our decoder model does the opposite operation of the encoder model, the decoder reconstructs our image using the encoded representation of
+the image. To help with building the encoder and decoder I defined two helper functions, one for the downsampling blocks in
 the encoder, and another for the upsampling blocks in the decoder,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">downsample_block</span><span class="p">(</span><span class="n">prev_block</span><span class="p">,</span><span class="n">filters</span><span class="p">,</span><span class="n">kernel_size</span><span class="p">,</span><span class="n">dropout</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">,</span>
