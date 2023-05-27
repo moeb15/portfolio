@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>ma2bader@uwaterloo.ca (Mujtaba Bader)</managingEditor>
     <webMaster>ma2bader@uwaterloo.ca (Mujtaba Bader)</webMaster>
-    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://moeb15.github.io/portfolio/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sentiment Analysis With Transformers</title>
+      <link>https://moeb15.github.io/portfolio/post/2023-05-27-steam-review-transformers/</link>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+      <author>ma2bader@uwaterloo.ca (Mujtaba Bader)</author>
+      <guid>https://moeb15.github.io/portfolio/post/2023-05-27-steam-review-transformers/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Outfit Segmentation With UNet</title>
       <link>https://moeb15.github.io/portfolio/post/2023-05-21-semantic-segmentation-unet/</link>
