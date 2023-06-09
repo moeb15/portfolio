@@ -63,7 +63,7 @@
   "headline": "Sentiment Analysis With Transformers",
   "description" : "",
   "inLanguage" : "en",
-  "wordCount":  866 ,
+  "wordCount":  1173 ,
   "datePublished" : "2023-05-27T00:00:00",
   "dateModified" : "2023-05-27T00:00:00",
   "image" : "https:\/\/moeb15.github.io\/portfolio",
@@ -228,10 +228,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on May 27, 2023
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;866&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1173&nbsp;words
   
   
     
@@ -259,7 +259,7 @@
       <article role="main" class="blog-post">
         <h2 id="project-overview">Project Overview</h2>
 <p>For this project I took a dataset from <a href="https://www.kaggle.com/datasets/arashnic/game-review-dataset">Kaggle</a> consisting of game titles, user reviews, and user suggestions
-(1 signifying the review is positive, 0 signifying the review is negative).</p>
+(1 signifying the review is positive, 0 signifying the review is negative), you can find the code at this <a href="https://github.com/moeb15/Steam-Review-Sentitment-Analysis">repository</a>.</p>
 <h2 id="eda">EDA</h2>
 <p>I started by cleaning the data, removing any null values or duplicates, then removed any non-alphanumeric characters from the user reviews as apart of the preprocessing step
 before training the model. I also generated some plots to visualize some features of the data like what games had the most number of reviews,</p>
@@ -432,6 +432,87 @@ is a clear sign of overfitting.</p>
 
 <p>I had tuned the hyperparameters several times, including the dropout rates in the positional embedding and encoder layers,
 however the validation accuracy did not seem to improve. In the next iteration I&rsquo;ll go over using the pretrained model DistilBERT for this task.</p>
+<h2 id="finetuning-distilbert">Finetuning DistilBERT</h2>
+<h3 id="iteration-1">Iteration 1</h3>
+<p>I loaded in the model using Hugging Face transformers and finetuned it using the training the data, I trained the model using a Kaggle notebook since
+my own pc isn&rsquo;t very powerful and the model had enough parameters to make training it take a significant amount of time, the following is the code needed to load the model and build the training/validation datasets, and the training results,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">DistilBertTokenizer</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">TFAutoModelForSequenceClassification</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/kaggle/input/dbert-stream/train_clean.csv&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">model_ckpt</span> <span class="o">=</span> <span class="s1">&#39;distilbert-base-uncased&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">dbert_tokenizer</span> <span class="o">=</span> <span class="n">DistilBertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">model_ckpt</span><span class="p">,</span><span class="n">return_tensors</span><span class="o">=</span><span class="s1">&#39;tf&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dbert_model</span> <span class="o">=</span> <span class="n">TFAutoModelForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">model_ckpt</span><span class="p">,</span><span class="n">num_labels</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="p">[</span><span class="s1">&#39;user_review&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;user_review&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;user_review&#39;</span><span class="p">:</span><span class="s1">&#39;text&#39;</span><span class="p">,</span><span class="s1">&#39;user_suggestion&#39;</span><span class="p">:</span><span class="s1">&#39;labels&#39;</span><span class="p">})</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">tokenize_batch</span><span class="p">(</span><span class="n">batch</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dbert_tokenizer</span><span class="p">(</span><span class="n">batch</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">padding</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">truncation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">Dataset</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">h_train_data</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">from_pandas</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">h_train_enc</span> <span class="o">=</span> <span class="n">h_train_data</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">tokenize_batch</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                              <span class="n">batched</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                              <span class="n">batch_size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">DataCollatorWithPadding</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">tokenizer_columns</span> <span class="o">=</span> <span class="n">dbert_tokenizer</span><span class="o">.</span><span class="n">model_input_names</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">data_collator</span> <span class="o">=</span> <span class="n">DataCollatorWithPadding</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">=</span><span class="n">dbert_tokenizer</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&#34;tf&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dbert_ds</span> <span class="o">=</span> <span class="n">h_train_enc</span><span class="o">.</span><span class="n">to_tf_dataset</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">columns</span><span class="o">=</span><span class="n">tokenizer_columns</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">label_cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;labels&#34;</span><span class="p">],</span><span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">collate_fn</span><span class="o">=</span><span class="n">data_collator</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dbert_tr</span> <span class="o">=</span> <span class="n">dbert_ds</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dbert_ds</span><span class="p">)</span><span class="o">*</span><span class="mf">0.9</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">dbert_val</span> <span class="o">=</span> <span class="n">dbert_ds</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dbert_ds</span><span class="p">)</span><span class="o">*</span><span class="mf">0.9</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dbert_model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">optimizer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dbert_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dbert_tr</span><span class="p">,</span><span class="n">validation_data</span><span class="o">=</span><span class="n">dbert_val</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span></span></code></pre></div>
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://moeb15.github.io/portfolio/images/dbert_iter_1.png" alt="/images/dbert_iter_1.png"/>
+    </div>
+    <a href="https://moeb15.github.io/portfolio/images/dbert_iter_1.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<p>The results aren&rsquo;t very good. For the next iteration, lets try freezing some of the model layers and see how that effects our results.</p>
+<h3 id="iteration-2">Iteration 2</h3>
+<p>For this iteration I decided to freeze the distilbert layer and pre_classifier, leaving only the last dense layer used
+for classification. Since the model was trained on BookCorpus, a dataset consisting of 11,038 unpublished books and English Wikipedia,
+it&rsquo;s not likely our training data differs from the BookCorpus dataset, so it&rsquo;s best to start by freezing everything but the last dense layer.
+After some experimentation I also adjusted the learning rate to 0.0005, and added early stopping.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="https://moeb15.github.io/portfolio/images/dbert_iter_2.png" alt="/images/dbert_iter_2.png"/>
+    </div>
+    <a href="https://moeb15.github.io/portfolio/images/dbert_iter_2.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<p>The model in this iteration performs much better, although it falls behind on the regular Encoder when it comes to its performance on the training data.
+The fine-tuned model still out perfroms the vanilla Encoder on the validation set.</p>
 
         
 
