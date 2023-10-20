@@ -2,7 +2,7 @@ import { FaSpotify } from "react-icons/fa";
 import { MdForum } from "react-icons/md";
 import { GiClothes } from "react-icons/gi";
 import { SiNewegg } from "react-icons/si";
-
+import { AiFillLock } from "react-icons/ai";
 
 function Projects(){
     return(
@@ -13,7 +13,17 @@ function Projects(){
                     <p className="py-6">Checkout some of my projects, click the icons to view the repositories</p>
                 </div>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-green-700 duration-500 p-4  w-full">
+                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-pink-800 duration-500 p-4 w-full">
+                            <a href="https://github.com/moeb15/Password-Manager">
+                                <AiFillLock className="mx-auto" size={30}/>
+                            </a>
+                            <span className="text-2xl font-bold text-white tracking-wider">
+                                Password Manager API
+                            </span>
+                            <p className="text-sm">Built with Go, Gin, Golang-JWT, MongoDB, and the Go Crypto package</p>
+                        </div>
+
+                        <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-green-700 duration-500 p-4  w-full">
                             <a href="https://github.com/moeb15/spotify_recommender">
                                 <FaSpotify className="mx-auto" size={30}/>
                             </a>
