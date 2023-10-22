@@ -18,9 +18,9 @@ function Projects(){
                                 <AiFillLock className="mx-auto" size={30}/>
                             </a>
                             <span className="text-2xl font-bold text-white tracking-wider">
-                                Password Manager API
+                                Password Manager
                             </span>
-                            <p className="text-sm">Built with Go, Gin, Golang-JWT, MongoDB, and the Go Crypto package</p>
+                            <p className="text-sm">Built with Go, Gin, Golang-JWT, MongoDB, the Go Crypto package, JavaScript, React, and Tailwind CSS</p>
                         </div>
 
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-green-700 duration-500 p-4  w-full">
@@ -40,7 +40,7 @@ function Projects(){
                             <span className="text-2xl font-bold text-white tracking-wider">
                                 Forum Website
                             </span>
-                            <p className="text-sm">Built with Go, Gin, Gorm, Golang-JWT, PostgreSQL, JavaScript, and React</p>
+                            <p className="text-sm">Built with Go, Gin, Gorm, Golang-JWT, PostgreSQL, JavaScript, React, and Tailwind CSS</p>
                         </div>
 
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-orange-600 duration-500 p-4 w-full">
