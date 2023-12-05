@@ -1,7 +1,7 @@
 import { FaPython,FaHtml5,FaCss3Alt,FaDocker } from "react-icons/fa";
 import { FaGolang,FaReact } from "react-icons/fa6";
 import { BiLogoGoogleCloud,BiLogoJavascript } from "react-icons/bi";
-import { SiPostman } from "react-icons/si";
+import { SiPostman, SiCplusplus, SiSfml } from "react-icons/si";
 import { AiOutlineConsoleSql } from "react-icons/ai";
 
 function Skills(){
@@ -38,6 +38,14 @@ function Skills(){
                     <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
                         <FaGolang className="mx-auto" size={30}/>
                         <p className="my-4">Go</p>
+                    </div>
+                    <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
+                        <SiCplusplus className="mx-auto" size={30}/>
+                        <p className="my-4">C++</p>
+                    </div>
+                    <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
+                        <SiSfml className="mx-auto" size={30}/>
+                        <p className="my-4">SFML</p>
                     </div>
                     <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
                         <AiOutlineConsoleSql className="mx-auto" size={30}/>
