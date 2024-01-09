@@ -1,6 +1,6 @@
 import { FaSpotify } from "react-icons/fa";
 import { MdForum } from "react-icons/md";
-import { GiClothes } from "react-icons/gi";
+import { GiClothes, GiHighPunch } from "react-icons/gi";
 import { SiNewegg } from "react-icons/si";
 import { AiFillLock } from "react-icons/ai";
 
@@ -13,6 +13,7 @@ function Projects(){
                     <p className="py-6">Checkout some of my projects, click the icons to view the repositories</p>
                 </div>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+
                          <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-pink-800 duration-500 p-4 w-full">
                             <a href="https://github.com/moeb15/Password-Manager">
                                 <AiFillLock className="mx-auto" size={30}/>
@@ -61,6 +62,16 @@ function Projects(){
                                 Outfit Segmenation with UNet
                             </span>
                             <p className="text-sm">Built with Python, OpenCV, and TensorFlow</p>
+                        </div>
+                        
+                        <div className="shadow-md shadow-[#040c16] rounded-md hover: bg-yellow-900 duration-500 p-4 w-full">
+                            <a href="https://github.com/moeb15/Password-Manager">
+                                <GiHighPunch className="mx-auto" size={30}/>
+                            </a>
+                            <span className="text-2xl font-bold text-white tracking-wider">
+                                2D Fighting Game
+                            </span>
+                            <p className="text-sm">Developed with C++, SFML, and Gimp. Actively working on this project.</p>
                         </div>
                     </div>
                 </div>
