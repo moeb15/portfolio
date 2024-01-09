@@ -63,8 +63,8 @@ function Projects(){
                             </span>
                             <p className="text-sm">Built with Python, OpenCV, and TensorFlow</p>
                         </div>
-                        
-                        <div className="shadow-md shadow-[#040c16] rounded-md hover: bg-yellow-900 duration-500 p-4 w-full">
+
+                        <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-yellow-900 duration-500 p-4 w-full">
                             <a href="https://github.com/moeb15/Password-Manager">
                                 <GiHighPunch className="mx-auto" size={30}/>
                             </a>
