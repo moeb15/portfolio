@@ -1,7 +1,7 @@
-import { FaSpotify } from "react-icons/fa";
+//import { FaSpotify } from "react-icons/fa";
 import { MdForum } from "react-icons/md";
 import { GiClothes, GiHighPunch } from "react-icons/gi";
-import { SiNewegg } from "react-icons/si";
+import { SiNewegg, SiUnrealengine } from "react-icons/si";
 import { AiFillLock } from "react-icons/ai";
 
 function Projects(){
@@ -25,13 +25,14 @@ function Projects(){
                         </div>
 
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-green-700 duration-500 p-4  w-full">
-                            <a href="https://github.com/moeb15/spotify_recommender">
-                                <FaSpotify className="mx-auto" size={30}/>
+                            <a href="https://github.com/moeb15/3D-OpenGL-Game">
+                                <SiUnrealengine className="mx-auto" size={30}/>
                             </a>
                             <span className="text-2xl font-bold text-white tracking-wider">
-                                Spotify Recommender System
+                                3D Game Engine
                             </span>
-                            <p className="text-sm">Built with Python, pandas, Scikit-Learn, KModes, SQL, and Streamlit</p>
+                            <p className="text-sm">Developed using C++, GLSL, GLFW, GLM, Assimp, and OpenGL </p>
+                            <p className="text-sm"> Actively working on this project </p>
                         </div>
 
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-red-500 duration-500 p-4 w-full">
@@ -71,7 +72,7 @@ function Projects(){
                             <span className="text-2xl font-bold text-white tracking-wider">
                                 2D Fighting Game
                             </span>
-                            <p className="text-sm">Developed with C++, SFML, and Gimp. Actively working on this project.</p>
+                            <p className="text-sm">Developed with C++, SFML, and Gimp</p>
                         </div>
                     </div>
                 </div>
