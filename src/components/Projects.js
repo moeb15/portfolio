@@ -66,7 +66,7 @@ function Projects(){
                         </div>
 
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-yellow-900 duration-500 p-4 w-full">
-                            <a href="https://github.com/moeb15/Password-Manager">
+                            <a href="https://github.com/moeb15/Medieval-Fighter">
                                 <GiHighPunch className="mx-auto" size={30}/>
                             </a>
                             <span className="text-2xl font-bold text-white tracking-wider">
