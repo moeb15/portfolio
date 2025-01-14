@@ -1,4 +1,4 @@
-import { FaBars,FaTimes,FaGithub,FaLinkedin,FaKaggle } from "react-icons/fa";
+import { FaBars,FaTimes,FaGithub,FaLinkedin,FaItchIo } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-scroll";
 
@@ -27,6 +27,11 @@ function Navbar(){
                 <li>
                     <Link to="skills" smooth={true} duration={500}>
                         Skills
+                    </Link>
+                </li>
+                <li>
+                    <Link to="demos" smooth={true} duration={500}>
+                        Demos
                     </Link>
                 </li>
                 <li>
@@ -63,6 +68,11 @@ function Navbar(){
                     </Link>
                 </li>
                 <li className="py-6 text-4xl">
+                    <Link onClick={handleClick} to="demos" smooth={true} duration={500}>
+                        Demos
+                    </Link>
+                </li>
+                <li className="py-6 text-4xl">
                     <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
                         Projects
                     </Link>
@@ -83,12 +93,12 @@ function Navbar(){
                             <FaLinkedin size={30}/>
                         </a>
                     </li>
-                    {/*<li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500">
-                        <a className="flex justify-between items-center w-full text-gray-300" href="https://www.kaggle.com/mbader12">
-                            Kaggle
-                            <FaKaggle size={30}/>
+                    <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-900">
+                        <a className="flex justify-between items-center w-full text-gray-300" href="https://moeb.itch.io/">
+                            Itch.io
+                            <FaItchIo size={30}/>
                         </a>
-            </li>*/}
+                    </li>
                 </ul>
             </div>
         </div>

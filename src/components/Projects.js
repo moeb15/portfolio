@@ -1,8 +1,7 @@
-//import { FaSpotify } from "react-icons/fa";
-import { MdForum } from "react-icons/md";
-import { GiClothes, GiHighPunch } from "react-icons/gi";
+import { GiClothes, GiHighPunch, GiJumpAcross } from "react-icons/gi";
 import { SiNewegg, SiUnrealengine } from "react-icons/si";
 import { AiFillLock } from "react-icons/ai";
+import { FaGun } from "react-icons/fa6";
 
 function Projects(){
     return(
@@ -13,17 +12,15 @@ function Projects(){
                     <p className="py-6">Checkout some of my projects, click the icons to view the repositories</p>
                 </div>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-
-                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-pink-800 duration-500 p-4 w-full">
-                            <a href="https://github.com/moeb15/Password-Manager">
-                                <AiFillLock className="mx-auto" size={30}/>
+                        <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-pink-800 duration-500 p-4 w-full">
+                            <a href="https://github.com/moeb15/RetroFPS">
+                                <FaGun className="mx-auto" size={30}/>
                             </a>
                             <span className="text-2xl font-bold text-white tracking-wider">
-                                Password Manager
+                                Retro FPS
                             </span>
-                            <p className="text-sm">Built with Go, Gin, Golang-JWT, MongoDB, the Go Crypto package, JavaScript, React, and Tailwind CSS</p>
+                            <p className="text-sm">Built with C++ and Unreal Engine 5</p>
                         </div>
-
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-green-700 duration-500 p-4  w-full">
                             <a href="https://github.com/moeb15/3D-OpenGL-Game">
                                 <SiUnrealengine className="mx-auto" size={30}/>
@@ -36,13 +33,13 @@ function Projects(){
                         </div>
 
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-red-500 duration-500 p-4 w-full">
-                            <a href="https://github.com/moeb15/forum_app">
-                                <MdForum className="mx-auto" size={30}/>
+                            <a href="https://github.com/moeb15/2D-Platformer">
+                                <GiJumpAcross className="mx-auto" size={30}/>
                             </a>
                             <span className="text-2xl font-bold text-white tracking-wider">
-                                Forum Website
+                                2D Platformer
                             </span>
-                            <p className="text-sm">Built with Go, Gin, Gorm, Golang-JWT, PostgreSQL, JavaScript, React, and Tailwind CSS</p>
+                            <p className="text-sm">Built with C++, SFML, ImGui, Aesprite, and Reaper</p>
                         </div>
 
                         <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-orange-600 duration-500 p-4 w-full">
@@ -73,6 +70,16 @@ function Projects(){
                                 2D Fighting Game
                             </span>
                             <p className="text-sm">Developed with C++, SFML, and Gimp</p>
+                        </div>
+
+                        <div className="shadow-md shadow-[#040c16] rounded-md hover:bg-pink-800 duration-500 p-4 w-full">
+                            <a href="https://github.com/moeb15/Password-Manager">
+                                <AiFillLock className="mx-auto" size={30}/>
+                            </a>
+                            <span className="text-2xl font-bold text-white tracking-wider">
+                                Password Manager
+                            </span>
+                            <p className="text-sm">Built with Go, Gin, Golang-JWT, MongoDB, the Go Crypto package, JavaScript, React, and Tailwind CSS</p>
                         </div>
                     </div>
                 </div>

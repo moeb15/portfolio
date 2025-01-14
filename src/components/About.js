@@ -16,8 +16,8 @@ function About(){
                             <p>
                                 I'm a recent graduate from the University of Waterloo with 
                                 a Bachelor's of Mathematics, Honours Applied Mathematics major. 
-                                I enjoy programming, in particular I spend my time learning about game and game engine development,
-                                 and building full stack projects. 
+                                I enjoy programming, in particular I spend my time learning about and programming
+                                games, and lately my main focus has been developing games using Unreal Engine 5.
                             </p>
                         </div>
                     </div>
